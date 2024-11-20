@@ -21,6 +21,7 @@ export default function Orders() {
 
   const getAllOrders = async () => {
     const [error, res] = await to(getOrders());
+    console.log("getallorders", res);
     if (error) return;
 
     const { data } = res;
